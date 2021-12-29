@@ -85,7 +85,7 @@ runs:
         format_doc: ${{ inputs.content_format_doc }}
     - name: Merge (Cover, Content)
       if: ${{ success() }}
-      uses: iu-actions/workbook-merge@main
+      uses: iu-actions/workbook-merge@v1
     - name: Release Workbook
       if: ${{ success() }}
       uses: iu-actions/workbook-release@main
