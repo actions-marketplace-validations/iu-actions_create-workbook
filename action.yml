@@ -88,7 +88,7 @@ runs:
       uses: iu-actions/workbook-merge@v1
     - name: Release Workbook
       if: ${{ success() }}
-      uses: iu-actions/workbook-release@main
+      uses: iu-actions/workbook-release@v1
       with:
         # student details
         first_name: ${{ inputs.first_name }}
