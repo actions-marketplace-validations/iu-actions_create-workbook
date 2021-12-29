@@ -1,6 +1,10 @@
 name: Create IU Workbook
 description: Create your IU Workbook with GitHub Actions.
 
+branding:
+  icon: 'book'  
+  color: 'gray-dark'
+
 inputs:
   # student details
   first_name:
