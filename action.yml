@@ -76,7 +76,7 @@ runs:
         template_doc: ${{ inputs.cover_template_doc }}
     - name: Create Content
       if: ${{ success() }}
-      uses: iu-actions/workbook-content@main
+      uses: iu-actions/workbook-content@v1
       with:
         # workbook details
         workbook: ${{ inputs.workbook }}
