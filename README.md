@@ -20,6 +20,7 @@ This action requires the presence of inputs, which are listed below.
 - `degree`: The degree pursued by the student. (**required**)
 
 - `workbook`: Path to the `workbook.md`. (**required**)
+- `bibliography`: Path to the `bibliography.md`. (**required**)
 
 - `course_name`: The name of the course. (**required**)
 - `course_id`: The id/number of the course. (**required**)
@@ -31,6 +32,7 @@ This action requires the presence of inputs, which are listed below.
 - `cover_template_doc`: Path to the Markdown template of the cover page to define the structure. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--template)
 - `cover_format_doc`: Path to the Microsoft Word template of the cover page. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--reference-doc)
 - `content_format_doc`: Path to the Microsoft Word template of the content. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--reference-doc)
+- `bibliography_format_doc`: Path to the Microsoft Word template of the bibliography. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--reference-doc)
 
 ## Example
 
@@ -54,9 +56,13 @@ uses: iu-actions/create-workbook@v1
           
     # workbook details
     workbook: exam/workbook.md
+    
+    # bibliography details
+    bibliography: exam/bibliography.md
 
     # configuration details
     content_format_doc: .workbook/content/format.docx
     cover_format_doc: .workbook/cover/format.docx
     cover_template_doc: .workbook/cover/template.md
+    bibliography_template_doc: .workbook/bibliography/format.docx
   ```
