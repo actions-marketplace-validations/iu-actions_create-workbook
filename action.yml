@@ -41,6 +41,11 @@ inputs:
   workbook:
     description: Path to the workbook.md
     required: true
+    
+  # bibliography details
+  bibliography:
+    description: Path to the bibliography.md
+    required: true
   
   # configuration details
   cover_template_doc:
@@ -51,6 +56,9 @@ inputs:
     required: true
   content_format_doc:
     description: Path to the Microsoft Word template of the content
+    required: true
+  bibliography_format_doc:
+    description: Path to the Microsoft Word template of the bibliography
     required: true
     
 runs:
@@ -87,9 +95,18 @@ runs:
 
         # configuration details
         format_doc: ${{ inputs.content_format_doc }}
-    - name: Merge (Cover, Content)
+    - name: Create Bibliography
       if: ${{ success() }}
-      uses: iu-actions/workbook-merge@v1
+      uses: iu-actions/workbook-bibliography@v1
+      with:
+        # bibliography details
+        bibliography: ${{ inputs.bibliography }}
+
+        # configuration details
+        format_doc: ${{ inputs.bibliography_format_doc }}
+    - name: Merge (Cover, Content, Bibliography)
+      if: ${{ success() }}
+      uses: iu-actions/workbook-merge@v2
     - name: Release Workbook
       if: ${{ success() }}
       uses: iu-actions/workbook-release@v1
