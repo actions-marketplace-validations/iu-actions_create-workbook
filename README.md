@@ -61,8 +61,8 @@ uses: iu-actions/create-workbook@v1
     bibliography: exam/bibliography.md
 
     # configuration details
-    content_format_doc: .workbook/content/format.docx
-    cover_format_doc: .workbook/cover/format.docx
     cover_template_doc: .workbook/cover/template.md
+    cover_format_doc: .workbook/cover/format.docx
+    content_format_doc: .workbook/content/format.docx
     bibliography_template_doc: .workbook/bibliography/format.docx
   ```
