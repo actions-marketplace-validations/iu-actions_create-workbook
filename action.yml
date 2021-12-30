@@ -43,14 +43,14 @@ inputs:
     required: true
   
   # configuration details
-  content_format_doc:
-    description: Path to the Microsoft Word template of the content
+  cover_template_doc:
+    description: Path to the Markdown template of the cover page to define the structure
     required: true
   cover_format_doc:
     description: Path to the Microsoft Word template of the cover page
     required: true
-  cover_template_doc:
-    description: Path to the Markdown template of the cover page to define the structure
+  content_format_doc:
+    description: Path to the Microsoft Word template of the content
     required: true
     
 runs:
