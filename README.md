@@ -28,9 +28,9 @@ This action requires the presence of inputs, which are listed below.
 
 *Note*: The following files must be present at the specified location and contain the appropriate variables.
 
-- `content_format_doc`: Path to the Microsoft Word template of the content. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--reference-doc)
-- `cover_format_doc`: Path to the Microsoft Word template of the cover page. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--reference-doc)
 - `cover_template_doc`: Path to the Markdown template of the cover page to define the structure. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--template)
+- `cover_format_doc`: Path to the Microsoft Word template of the cover page. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--reference-doc)
+- `content_format_doc`: Path to the Microsoft Word template of the content. (**required**) → [Learn more](https://pandoc.org/MANUAL.html#option--reference-doc)
 
 ## Example
 
