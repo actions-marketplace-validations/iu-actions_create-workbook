@@ -47,6 +47,12 @@ inputs:
     description: Path to the bibliography.md
     required: true
   
+  # scribbr usage
+  scribbr:
+    description: Use bibliography.scribbr
+    required: false
+    default: false
+  
   # configuration details
   cover_template_doc:
     description: Path to the Markdown template of the cover page to define the structure
@@ -95,9 +101,25 @@ runs:
 
         # configuration details
         format_doc: ${{ inputs.content_format_doc }}
+    - name: Use Bibliography Middleware [Scribbr]
+      if: ${{ success() && inputs.scribbr == 'true' }}
+      id: scribbr
+      uses: iu-actions/use-scribbr@main
+      with:
+        # generator details
+        bibliography: ${{ inputs.bibliography }}
+    - name: Create Bibliography [Scribbr]
+      if: ${{ success() && inputs.scribbr == 'true' }}
+      uses: iu-actions/workbook-bibliography@v2
+      with: 
+        # bibliography details
+        bibliography: ${{ steps.scribbr.outputs.bibliography }}
+
+        # configuration details
+        format_doc: ${{ inputs.bibliography_format_doc }}
     - name: Create Bibliography
-      if: ${{ success() }}
-      uses: iu-actions/workbook-bibliography@v1
+      if: ${{ success()  && inputs.scribbr == 'false' }}
+      uses: iu-actions/workbook-bibliography@v2
       with:
         # bibliography details
         bibliography: ${{ inputs.bibliography }}
