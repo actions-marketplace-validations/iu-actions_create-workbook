@@ -39,7 +39,7 @@ This action requires the presence of inputs, which are listed below.
 Below you will find an example of how you can use this action.
 
 ```yaml
-uses: iu-actions/create-workbook@v2
+uses: iu-actions/create-workbook@v3
   with:
     # student details
     first_name: John
