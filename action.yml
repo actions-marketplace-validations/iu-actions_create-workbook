@@ -82,7 +82,7 @@ runs:
       uses: actions/checkout@v2
     - name: Create Cover
       if: ${{ success() }}
-      uses: iu-actions/workbook-cover@v1
+      uses: iu-actions/workbook-cover@main
       with:
         # student details
         first_name: ${{ inputs.first_name }}
