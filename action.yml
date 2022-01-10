@@ -22,6 +22,14 @@ inputs:
   degree:
     description: The degree pursued by the student
     required: true
+  semester:
+    description: The current semester of the student
+    required: true
+    
+  # address details
+  address:
+    description: The address of the student
+    required: true
     
   # course details
   course_name:
@@ -82,6 +90,11 @@ runs:
         email: ${{ inputs.email }}
         id: ${{ inputs.id }}
         degree: ${{ inputs.degree }}
+        semester: ${{ inputs.semester }}
+        
+        # address details
+        address: |
+          $(sed '2,$s/^/    /' < <( echo "${{ inputs.address }}"))
 
         # course details
         course_name: ${{ inputs.course_name }}
