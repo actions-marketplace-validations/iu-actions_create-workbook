@@ -18,6 +18,8 @@ This action requires the presence of inputs, which are listed below.
 - `email`: The email of the student. (**required**)
 - `id`: The id of the student. (**required**)
 - `degree`: The degree pursued by the student. (**required**)
+- `semester`: The current semester of the student. (**required**)
+- `address`: The address of the student. (**required**)
 
 - `workbook`: Path to the `workbook.md`. (**required**)
 - `bibliography`: Path to the `bibliography.md`. (**required**)
