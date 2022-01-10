@@ -49,6 +49,13 @@ uses: iu-actions/create-workbook@v4
     email: john.doe@example.edu
     id: 12345678
     degree: B. Sc. Computer Science
+    semester: 2. Semester
+    
+    # address details
+    address: |
+      MIT Room 2-245
+      Department of Mathematics
+      Cambridge MA 02139
 
     # course details
     course_name: Linear Algebra I
